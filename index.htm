@@ -4,11 +4,11 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         </head>
         <body>
-        <div id="navbar"><span>Three.js Tutorial</span></div>
-		<script src="jquery-3.6.0.min.js"></script>
-        <script src="three.js"></script>
-		<script src="GLTFLoader.js"></script>
-		<script src="OrbitControls.js"></script>
+        <div id="navbar"><span>3D Text Demo</span></div>
+		<script src="libs/jquery-3.6.0.min.js"></script>
+        <script src="libs/three.js"></script>
+		<script src="libs/GLTFLoader.js"></script>
+		<script src="libs/OrbitControls.js"></script>
         <script>
           let scene, camera, renderer;
           function init() {
@@ -48,7 +48,7 @@
 			  controls = new THREE.OrbitControls(camera, renderer.domElement);
 			  controls.addEventListener('change', renderer);
               let loader = new THREE.GLTFLoader();
-              loader.load('openlogo.glb', function (gltf) {
+              loader.load('assets/img/openlogo.glb', function (gltf) {
                   car = gltf.scene.children[0];
                   car.scale.set(0.5, 0.5, 0.5);
                   scene.add(gltf.scene);
